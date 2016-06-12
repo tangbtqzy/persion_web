@@ -1,0 +1,12 @@
+<div class="outer_div">
+	<h1 class="login_label">
+	用户登录
+	</h1>
+	<%= form_tag '/login', :multipart => true do -%>
+		<%= text_field_tag 'uname', nil, class: 'form-control' %>
+		<%= text_field_tag 'upassword', nil, class: 'form-control' %>
+		<%= text_field_tag 'uemail', nil, class: 'form-control' %>
+		<%= show_simple_captcha %>
+		<%= submit_tag "提交", :class => "btn btn-primary" %>
+	<% end -%>
+</div>

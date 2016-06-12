@@ -1,0 +1,69 @@
+<style type="text/css">
+  .simple_captcha{border: 1px solid #ccc; padding: 5px !important;font-family: arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;}
+  .simple_captcha,
+  .simple_captcha div{display: table;}
+  .simple_captcha .simple_captcha_field,
+  .simple_captcha .simple_captcha_image{
+    border: 1px solid #ccc;
+    /*margin: 0px 0px 2px 0px !important;*/
+    padding: 0px !important;
+  }
+  .simple_captcha .simple_captcha_image img{
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 110px !important;
+  }
+  .simple_captcha .simple_captcha_label{font-size: 12px;}
+  div .simple_captcha_field{
+    float: left;
+  }
+  .simple_captcha .simple_captcha_field input{
+    width: 150px !important;
+    font-size: 16px;
+    border: none;
+    background-color: #fff;
+
+    float: left;
+    margin: 20px 0px 0px 20px;
+    padding: 10px 0px 10px 20px;
+    border-left: 1px solid #ddd;
+    color: #555
+  }
+  input#captcha{
+    margin: 1px 0px;
+  }
+  div.simple_captcha{
+    background: #fff;
+    width: 380px;
+  }
+  .register-content .register-form .item input[name="captcha"] {
+    width: 190px !important;
+    margin-right: 10px;
+  }
+  div.simple_captcha_field{
+    margin-right: 50px;
+  }
+  .simple_captcha_refresh_button{
+    float:left;
+  }
+  .simple_captcha div.simple_captcha_image{
+    float:left;
+    border:0px;
+  }
+</style>
+
+<div class='simple_captcha'>
+  <div class='simple_captcha_field'>
+    <%= simple_captcha_options[:field] %>
+  </div>
+  <div class='simple_captcha_image'>
+    <%= simple_captcha_options[:image] %>
+  </div>
+  <div class='simple_captcha_label'>
+    <%= simple_captcha_options[:label] %>
+  </div>
+
+  <div class='simple_captcha_refresh_button'>
+    <%= simple_captcha_options[:refresh_button] %>
+  </div>
+</div>
